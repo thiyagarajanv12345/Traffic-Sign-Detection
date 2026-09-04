@@ -288,16 +288,16 @@ if an == 1:
             for j in range(xmin.shape[1]):
                 initsol[i, j] = np.random.uniform(xmin[i, j], xmax[i, j])
 
-        print('PCOA....')
+        print('CWO....')
         [bestfit1, fitness1, bestsol1, Time1] = CWO(initsol, fname, xmin, xmax, max_iter)
 
-        print('RTH....')
+        print('TOT....')
         [bestfit2, fitness2, bestsol2, Time2] = TOT(initsol, fname, xmin, xmax, max_iter)
 
-        print('LEA....')
+        print('WOA....')
         [bestfit3, fitness3, bestsol3, Time3] = WOA(initsol, fname, xmin, xmax, max_iter)
 
-        print('AOOA....')
+        print('FLO....')
         [bestfit4, fitness4, bestsol4, Time4] = FLO(initsol, fname, xmin, xmax, max_iter)
 
         print('PROPOSED....')
